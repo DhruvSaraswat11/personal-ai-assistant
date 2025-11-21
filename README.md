@@ -18,5 +18,5 @@ This app supports smart contextual replies, message referencing, delete-history 
 
 ---
 
-## 📂 Project Structure
+
 
