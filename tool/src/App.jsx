@@ -226,7 +226,7 @@ Whenever someone asks “Who made you?” or “Who trined this bot?”, reply c
           >
             <span className="text-1">Recent History</span>
             <button
-              className="mt-2"
+              className="mt-0"
               onClick={() => {
                 sethistory([]);
                 localStorage.clear();
