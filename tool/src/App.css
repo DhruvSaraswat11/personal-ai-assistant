@@ -1,0 +1,125 @@
+body {
+  overflow: hidden;
+  font-family: "HIND", Tahoma, Geneva, Verdana, sans-serif;
+}
+.searchbar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 12px 0;
+  /* background: var(--color-zinc-900); */
+  border-top: 1px solid var(--color-zinc-800);
+  z-index: 999;
+  padding: 19px;
+}
+
+.openclose {
+  display: none;
+}
+.search {
+  display: flex;
+  width: 500px;
+  height: 60px;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 18px;
+  border: 2px solid var(--color-zinc-700);
+  /* background-color: var(--color-zinc-900); */
+  padding: 0 15px;
+}
+
+.search input {
+  flex: 1;
+  height: 100%;
+  border: none;
+  outline: none;
+  background: transparent;
+  padding-left: 10px;
+  font-size: 16px;
+}
+.nswer {
+  font-family: "HIND", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.search button {
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  font-size: 18px;
+  transition: 0.2s;
+}
+
+.search button:hover {
+  transform: scale(1.1);
+}
+
+.heading {
+  width: 100%;
+  text-align: center;
+  padding-bottom: 100px; /* Bottom navbar ke liye space */
+  padding-top: 20px;
+  height: calc(100vh - 120px);
+  overflow-y: auto;
+}
+.historyshown {
+  border: 2px solid rgb(72, 72, 77);
+  margin: 9px;
+  border-radius: 10px;
+}
+.heading::-webkit-scrollbar {
+  background-color: transparent;
+}
+@media (max-width: 600px) {
+  .rigt {
+    width: 100vw;
+  }
+  .left {
+    width: 100%;
+    position: fixed;
+    z-index: 999;
+    height: 100vh;
+  }
+
+  .left h2 {
+    border: 0;
+    margin-left: 80px;
+    width: 60%;
+    text-align: center;
+    margin-top: 10px;
+    font-size: 19px;
+  }
+  .left h2 button {
+    position: relative;
+    top: -1px;
+  }
+  .openclose {
+    display: inline;
+    z-index: 1000;
+    top: 20px;
+    width: 9px;
+  }
+  .historyshown {
+    border: 2px solid rgb(72, 72, 77);
+    margin: 5px;
+    border-radius: 10px;
+  }
+}
+
+@media (max-width: 950px) AND (min-width: 600px) {
+  .left h2 {
+    font-size: 14px;
+  }
+  .left h2 button {
+    position: relative;
+    top: -1px;
+  }
+  .historyshown {
+    border: 2px solid rgb(72, 72, 77);
+    margin: 5px;
+    border-radius: 10px;
+  }
+}
