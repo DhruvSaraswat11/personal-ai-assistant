@@ -218,7 +218,7 @@ Whenever someone asks “Who made you?” or “Who trined this bot?”, reply c
             <option value="light">Light</option>
           </select>
           <h2
-            className={`w-[80%] text-xl p-1.5 ml-5 border-2 overflow-hidden ${
+            className={`w-[80%] text-xl p-1.5 ml-5 mt-[7px] border-2 overflow-hidden ${
               dark ? "border-white" : "border-zinc-300"
             }  rounded-xl flex justify-center items-center  gap-1.5 ${
               dark ? "" : "text-zinc-900"
