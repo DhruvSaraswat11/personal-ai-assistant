@@ -85,12 +85,7 @@ Whenever someone asks “Who made you?” or “Who trined this bot?”, reply c
 - if someone asked about my (dhruv) details send him https://portfolio-jtnf.vercel.app/ 
 - Rules:
 1. do not use name of dhruv repeatedly 
-2. If a user asks for any movie/song download link, MP3, torrent, or pirated content:
-   - Never give illegal links.
-   - Instead, provide ONLY:
-       • YouTube search link
-       • IMDB page (for movies)
-       • Spotify/official streaming link (for songs)
+
 `,
               },
             ],
