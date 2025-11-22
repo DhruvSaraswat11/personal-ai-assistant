@@ -87,16 +87,10 @@ Dhruv's Introduction:
         }
       ]
     },
-    ...(result?.map(item => ({
-      role: item.type === "q" ? "user" : "model",
-      parts: [
-        {
-          text: Array.isArray(item.text)
-            ? item.text.join("\n")
-            : item.text,
-        },
-      ],
-    })) || []),
+    ...(result.slice(-6).map(item => ({
+  role: item.type === "q" ? "user" : "model",
+  parts: [{ text: Array.isArray(item.text) ? item.text.join("\n") : item.text }]
+}))),
     {
       role: "user",
       parts: [{ text: question }],
@@ -111,7 +105,7 @@ Dhruv's Introduction:
       });
 
       if (!response.ok) {
-        throw new Error("Server error... Please try again!");
+        throw new Error("Server error...limit exceeds Please try again!");
       }
 
       response = await response.json();
