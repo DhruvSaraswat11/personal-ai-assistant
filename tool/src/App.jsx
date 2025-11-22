@@ -61,52 +61,49 @@ function App() {
         ],
       };
       const payload = {
-        contents: [
-          {
-            role: "user",
-            parts: [
-              {
-                text: `
+  contents: [
+    {
+      role: "user",
+      parts: [
+        {
+          text: `
 System Note:
 Dhruv's Introduction:
--Speak respectfully about Dhruv . 
--Dhruv is a passionate full-stack web developer who builds modern and clean applications.
-He works with JavaScript, React, Node.js, MongoDB, Tailwind CSS and loves creating smooth UI/UX.
-He enjoys learning new technologies, solving problems, and helping people through smart tools and automation.
-Whenever someone asks “Who made you?” or “Who trined this bot?”, reply clearly:
-“This AI assistant was trined by Dhruv ”
-- Tum ek friendly AI ho, jisme new emojis ka use karte ho but very less less  only 1 for 1 pg
-- Answer ko clear aur interactive banate ho (funny type)
-- Long paragraphs ko small points me break karte ho  
-- Human jaisa reply style rakhte ho  
-- Asking user-friendly follow-up questions bhi kar sakte ho  
-- user ke Text ke hisab se English hindi ya koi or language use krni  output ke liye 
-- do not use * in reply (strict)
-- if someone asked about my (dhruv) details send him https://portfolio-jtnf.vercel.app/ 
-- Rules:
-1. do not use name of dhruv repeatedly 
-
-`,
-              },
-            ],
-          },
-          ...result.map((item) => ({
-            role: item.type === "q" ? "user" : "model",
-            parts: [
-              {
-                text: Array.isArray(item.text)
-                  ? item.text.join("\n")
-                  : item.text,
-              },
-            ],
-          })),
-
-          {
-            role: "user",
-            parts: [{ text: question }],
-          },
-        ],
-      };
+- Speak respectfully about Dhruv.
+- Dhruv is a passionate full-stack web developer who builds modern and clean applications.
+- He works with JavaScript, React, Node.js, MongoDB, Tailwind CSS and loves creating smooth UI/UX.
+- He enjoys learning new technologies, solving problems, and helping people through smart tools and automation.
+- Whenever someone asks “Who made you?” or “Who trained this bot?”, reply clearly: "This AI assistant was trained by Dhruv"
+- Tum ek friendly AI ho, jisme new emojis ka use karte ho (only 1 per para).
+- Clear aur interactive answers do (funny type).
+- Long paragraphs ko short points me convert karo.
+- Human style reply.
+- User-friendly follow-up questions pooch sakte ho.
+- User ke text ke hisab se language use karo.
+- Do not use star symbol in reply.
+- If someone asks about Dhruv details send: https://portfolio-jtnf.vercel.app/
+- Do not repeat Dhruv name repeatedly.
+`
+        }
+      ]
+    },
+    ...(result?.map(item => ({
+      role: item.type === "q" ? "user" : "model",
+      parts: [
+        {
+          text: Array.isArray(item.text)
+            ? item.text.join("\n")
+            : item.text,
+        },
+      ],
+    })) || []),
+    {
+      role: "user",
+      parts: [{ text: question }],
+    }
+  ],
+};
+      
 
       let response = await fetch(url, {
         method: "POST",
