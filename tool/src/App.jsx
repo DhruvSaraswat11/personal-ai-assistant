@@ -52,7 +52,7 @@ function App() {
     try {
       setloder(true);
 
-      const payload = {
+      const payload1 = {
         contents: [
           {
             role: "user",
@@ -60,7 +60,7 @@ function App() {
           },
         ],
       };
-      const payload1 = {
+      const payload = {
   contents: [
     {
       role: "user",
