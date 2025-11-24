@@ -9,7 +9,7 @@ function App() {
   const scrolltoTop = useRef("");
   const [loder, setloder] = useState(false);
   let [dark, setdark] = useState("dark");
-  let [set, setstyle] = useState(true);
+  let [set, setstyle] = useState(false);
   // if (localStorage.getItem("history")) {
   //   sethistory([...JSON.parse(localStorage.getItem("history"))]);
   // }
