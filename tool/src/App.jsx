@@ -244,7 +244,7 @@ Dhruv's Introduction:
                   } flex flex-row justify-between items-center `}
                   // onClick={(e) => handlehistorysearch(e)}
                 >
-                  {it}
+                   <span className="max-w-[80%] truncate">{it}</span>
                   <button
                     onClick={(e) => deleteit(e, it)}
                     className="m-[9px] cursor-pointer text-2xl"
