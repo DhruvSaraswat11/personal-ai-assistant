@@ -42,6 +42,13 @@ function App() {
       scrolltoTop.current.scrollTop = scrolltoTop.current.scrollHeight;
     }, 500);
   }
+
+
+  window.addEventListener("beforeunload", (event) => {
+    event.preventDefault();
+    event.returnValue = "";
+  });
+  
   function keydown(e) {
     if (e.key == "Enter") {
       getanswer();
