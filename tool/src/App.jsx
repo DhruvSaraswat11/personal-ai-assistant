@@ -303,7 +303,7 @@ Dhruv's Introduction:
                       i.text.map((it, ki) => (
                         <li
                           key={ki + Math.random()}
-                          className="pt-3 text-left pl-7 "
+                          className="pt-3 text-left pl-7 pr-[7px]"
                         >
                           <Ns ns={it}></Ns>
                         </li>
